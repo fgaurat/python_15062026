@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>firstname</th>
+                <th>lastname</th>
+                <th>gender</th>
+                <th>email</th>
+                <th>ip address</th>
+            </tr>
+        </thead>
+        Hello {{name}}
+        <tbody>
+            {% for customer in customers %}
+            <tr>
+                <td>{{customer.id}}</td>
+                <td>{{customer.first_name}}</td>
+                <td>{{customer.last_name}}</td>
+                <td>{{customer.gender}}</td>
+                <td>{{customer.email}}</td>
+                <td>{{customer.ip_address}}</td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+
+</body>
+</html>
